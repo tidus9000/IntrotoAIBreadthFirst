@@ -118,6 +118,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="main.c" />
+    <ClCompile Include="Mastermind_Main.c" />
+    <ClCompile Include="NQueensChecker.c" />
+    <ClCompile Include="SolutionListOperations.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NQueensChecker.h" />
+    <ClInclude Include="NQueensDefinitions.h" />
+    <ClInclude Include="SolutionListOperations.h" />
+    <ClInclude Include="StructureDefinitions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
