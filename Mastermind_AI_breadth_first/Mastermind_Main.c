@@ -14,6 +14,9 @@
 #include <stdlib.h>
 #include <time.h>
 
+// Additional #include statements (for breadth-first search solution)
+#include "StructureDefinitions.h"
+#include "SolutionListOperations.h"
 
 //some #defined values
 #define NUMPEGS 4
