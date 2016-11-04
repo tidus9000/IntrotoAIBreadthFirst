@@ -4,21 +4,23 @@
     <Filter Include="Breath_First_Routienes">
       <UniqueIdentifier>{23b25290-921f-4569-ba01-005c686ca1a6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Nathans_AI_API">
+      <UniqueIdentifier>{cf1bff63-c8a0-4ab8-a1bd-3fda0c88d6d6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="NQueensChecker.c">
-      <Filter>Breath_First_Routienes</Filter>
-    </ClCompile>
     <ClCompile Include="SolutionListOperations.c">
       <Filter>Breath_First_Routienes</Filter>
     </ClCompile>
-    <ClCompile Include="main.c" />
     <ClCompile Include="Mastermind_Main.c" />
+    <ClCompile Include="Solution_Search.c">
+      <Filter>Nathans_AI_API</Filter>
+    </ClCompile>
+    <ClCompile Include="\\nstu-uwe03.campus.ads.uwe.ac.uk\users3$\n4-butt\Personal\Games Tech\Introduction to AI\NQueensSourceCodeWithEmptyMain\NQueensChecker.c">
+      <Filter>Breath_First_Routienes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="NQueensChecker.h">
-      <Filter>Breath_First_Routienes</Filter>
-    </ClInclude>
     <ClInclude Include="NQueensDefinitions.h">
       <Filter>Breath_First_Routienes</Filter>
     </ClInclude>
@@ -26,6 +28,12 @@
       <Filter>Breath_First_Routienes</Filter>
     </ClInclude>
     <ClInclude Include="StructureDefinitions.h">
+      <Filter>Breath_First_Routienes</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_Search.h">
+      <Filter>Nathans_AI_API</Filter>
+    </ClInclude>
+    <ClInclude Include="\\nstu-uwe03.campus.ads.uwe.ac.uk\users3$\n4-butt\Personal\Games Tech\Introduction to AI\NQueensSourceCodeWithEmptyMain\NQueensChecker.h">
       <Filter>Breath_First_Routienes</Filter>
     </ClInclude>
   </ItemGroup>

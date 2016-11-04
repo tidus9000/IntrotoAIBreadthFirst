@@ -10,13 +10,14 @@
 // simple command line version of the mastermind game
 //
 
+#pragma warning (disable : 4996)
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 // Additional #include statements (for breadth-first search solution)
-#include "StructureDefinitions.h"
-#include "SolutionListOperations.h"
+#include "Solution_Search.h"
 
 //some #defined values
 #define NUMPEGS 4
