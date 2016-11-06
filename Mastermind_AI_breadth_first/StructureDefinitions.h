@@ -34,7 +34,7 @@
 
 typedef struct {
     int numberOfDefinedValues;///< how many variables in thre representation of a solution have their vales set
-    int variableValues [N]; ///< and what  are they: for example if the queen in row 5 is in column 6 we set variableValues[5] = 6;
+    char variableValues [N]; ///< and what  are they: for example if the queen in row 5 is in column 6 we set variableValues[5] = 6;
     int score; ///< measure of how infeasible the solution is - more is worse for minimisation,  e.g. NQueens
 } candidateSolution;
 

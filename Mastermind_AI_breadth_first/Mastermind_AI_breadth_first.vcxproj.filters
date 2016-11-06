@@ -4,8 +4,14 @@
     <Filter Include="Breath_First_Routienes">
       <UniqueIdentifier>{23b25290-921f-4569-ba01-005c686ca1a6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Nathans_AI_API">
+    <Filter Include="Our_AI_API">
       <UniqueIdentifier>{cf1bff63-c8a0-4ab8-a1bd-3fda0c88d6d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Our_AI_API\Search">
+      <UniqueIdentifier>{f279efde-0a65-456c-9629-22475b41d571}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Our_AI_API\Storage">
+      <UniqueIdentifier>{2056f63d-49de-43af-a953-7ba9efcf74d9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -13,11 +19,11 @@
       <Filter>Breath_First_Routienes</Filter>
     </ClCompile>
     <ClCompile Include="Mastermind_Main.c" />
-    <ClCompile Include="Solution_Search.c">
-      <Filter>Nathans_AI_API</Filter>
-    </ClCompile>
-    <ClCompile Include="\\nstu-uwe03.campus.ads.uwe.ac.uk\users3$\n4-butt\Personal\Games Tech\Introduction to AI\NQueensSourceCodeWithEmptyMain\NQueensChecker.c">
+    <ClCompile Include="NQueensChecker.c">
       <Filter>Breath_First_Routienes</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution_Search.c">
+      <Filter>Our_AI_API\Search</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -30,11 +36,14 @@
     <ClInclude Include="StructureDefinitions.h">
       <Filter>Breath_First_Routienes</Filter>
     </ClInclude>
-    <ClInclude Include="Solution_Search.h">
-      <Filter>Nathans_AI_API</Filter>
-    </ClInclude>
-    <ClInclude Include="\\nstu-uwe03.campus.ads.uwe.ac.uk\users3$\n4-butt\Personal\Games Tech\Introduction to AI\NQueensSourceCodeWithEmptyMain\NQueensChecker.h">
+    <ClInclude Include="NQueensChecker.h">
       <Filter>Breath_First_Routienes</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_Search.h">
+      <Filter>Our_AI_API\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="Update_Search.h">
+      <Filter>Our_AI_API\Storage</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

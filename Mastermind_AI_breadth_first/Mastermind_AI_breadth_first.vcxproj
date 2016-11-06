@@ -119,16 +119,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Mastermind_Main.c" />
+    <ClCompile Include="NQueensChecker.c" />
     <ClCompile Include="SolutionListOperations.c" />
     <ClCompile Include="Solution_Search.c" />
-    <ClCompile Include="\\nstu-uwe03.campus.ads.uwe.ac.uk\users3$\n4-butt\Personal\Games Tech\Introduction to AI\NQueensSourceCodeWithEmptyMain\NQueensChecker.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="NQueensChecker.h" />
     <ClInclude Include="NQueensDefinitions.h" />
     <ClInclude Include="SolutionListOperations.h" />
     <ClInclude Include="Solution_Search.h" />
     <ClInclude Include="StructureDefinitions.h" />
-    <ClInclude Include="\\nstu-uwe03.campus.ads.uwe.ac.uk\users3$\n4-butt\Personal\Games Tech\Introduction to AI\NQueensSourceCodeWithEmptyMain\NQueensChecker.h" />
+    <ClInclude Include="Update_Search.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

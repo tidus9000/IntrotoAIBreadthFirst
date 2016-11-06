@@ -14,9 +14,8 @@
 
 // Search Globals
 candidateSolution workingCandidate;     //this one will hold the soltion we arecurrently considering
-candidateList  currentListOfCandidates; // this list will store all the soltion we;ve created but not examined yet
+candidateList  currentListOfCandidates; // this list will store all the soltion we have created but not examined yet
 candidateList listOfExaminedCandidates; // this is where we will store all the ones we're done with
-
 
 
 /* 
@@ -29,6 +28,13 @@ candidateList listOfExaminedCandidates; // this is where we will store all the o
 * Work through the breadth first search generating each possible result and working through the list. 
 */
 
+
 // Generates the first guess that the system will make.
 void GenerateInitialGuess(char pegs[], int Size);
 
+// Generates a list of possible solutions. 
+// void GenerateListofSolutions();
+
+
+// Retrieves the score for the working candidiate.
+void UpdateScore(int NewScore);

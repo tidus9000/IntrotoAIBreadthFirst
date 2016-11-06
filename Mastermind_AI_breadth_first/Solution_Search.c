@@ -10,19 +10,36 @@
 #include <math.h>
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 
 
 #include "Solution_Search.h"
 
-
+// The pegs that the
+char PegChoice[4] = { 'r', 'g', 'b','y' };
+int previousScore = 0;
 
 void GenerateInitialGuess(char pegs[], int Size)
 {
-	//srand((unsigned int)time(NULL)); 
+	char InitialGuess;
 
-	/*int i;
-	for (int i = 0; i < Size; i++) 
+	srand((unsigned int)time(NULL)); 
+	workingCandidate.numberOfDefinedValues = Size;
+
+	InitialGuess = PegChoice[rand() % 4];
+
+
+	int i;
+	for (i = 0; i < Size; i++) 
 	{
-		
-	}*/
+		pegs[i] = workingCandidate.variableValues[i] = InitialGuess;
+	}
+
 }
+
+void UpdateScore(int NewScore)
+{
+	previousScore = workingCandidate.score;
+	workingCandidate.score = NewScore;
+}
+

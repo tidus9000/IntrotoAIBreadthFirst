@@ -1,5 +1,4 @@
-// (Nathan Butt) TODO - port over mastermind routienes from here to main.c
-/********************************************************************************************************************************************************/
+
 
 //
 //  main.c
@@ -78,13 +77,22 @@ int main(int argc, const char * argv[])
 			break;
 		else
 		{
-			//loop over each peg position
-			for (peg = 0; peg < NUMPEGS; peg++)
+			if (attempts < 1) 
 			{
-				//prompt the user to fill in the slot correctly and set the value in thisTryleftOutside
-				printf(" What is your guess for  peg %d? ", peg);
-				candidate[peg] = GetValidGuessForPeg();
+				// Nathan Butt (n86-64) - Generates starting state to begin the search. 
+				GenerateInitialGuess(candidate, NUMPEGS);
+			}
+			else 
+			{
+				//loop over each peg position
+				for (peg = 0; peg < NUMPEGS; peg++)
+				{
+					//prompt the user to fill in the slot correctly and set the value in thisTryleftOutside
 
+					// (Nathan Butt) TODO - Write search routienes. 
+					printf(" What is your guess for  peg %d? ", peg);
+					candidate[peg] = GetValidGuessForPeg();
+				}
 			}
 		}
 
@@ -95,6 +103,7 @@ int main(int argc, const char * argv[])
 		* It would be friendly to print out a message saying what the score was...
 		*/
 		scoreForAttempt = ScoreCandidateSolution(candidate, target);
+		UpdateScore(scoreForAttempt);
 		printf("The score for the guess:");
 		for (peg = 0; peg<NUMPEGS; peg++)
 		{
