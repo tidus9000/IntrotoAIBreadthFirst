@@ -84,15 +84,23 @@ int main(int argc, const char * argv[])
 			}
 			else 
 			{
+				GenerateListofSolutions(NUMPEGS);
+
+				RetrieveGeneratedSolution(candidate,NUMPEGS);
+
+
+
 				//loop over each peg position
-				for (peg = 0; peg < NUMPEGS; peg++)
-				{
-					//prompt the user to fill in the slot correctly and set the value in thisTryleftOutside
+				//for (peg = 0; peg < NUMPEGS; peg++)
+				//{
 
 					// (Nathan Butt) TODO - Write search routienes. 
-					printf(" What is your guess for  peg %d? ", peg);
-					candidate[peg] = GetValidGuessForPeg();
-				}
+					
+
+
+					//printf(" What is your guess for  peg %d? ", peg);
+					//candidate[peg] = GetValidGuessForPeg();
+				/*}*/
 			}
 		}
 

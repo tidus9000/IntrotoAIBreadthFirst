@@ -13,6 +13,9 @@
     <Filter Include="Our_AI_API\Storage">
       <UniqueIdentifier>{2056f63d-49de-43af-a953-7ba9efcf74d9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{f4b73cdc-aaf3-4630-8687-10723065f750}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SolutionListOperations.c">
@@ -44,6 +47,9 @@
     </ClInclude>
     <ClInclude Include="Update_Search.h">
       <Filter>Our_AI_API\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="boolean_type.h">
+      <Filter>Helpers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -124,6 +124,7 @@
     <ClCompile Include="Solution_Search.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="boolean_type.h" />
     <ClInclude Include="NQueensChecker.h" />
     <ClInclude Include="NQueensDefinitions.h" />
     <ClInclude Include="SolutionListOperations.h" />

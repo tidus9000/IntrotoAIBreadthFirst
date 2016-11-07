@@ -11,12 +11,18 @@
 #include "StructureDefinitions.h"
 #include "SolutionListOperations.h"
 
+// Stores the score of the pegs for evalutaion of the solution.
+struct PegScore
+{
+	int Blackpegs;
+	int Whitepegs;
+};
+
 
 // Search Globals
 candidateSolution workingCandidate;     //this one will hold the soltion we arecurrently considering
 candidateList  currentListOfCandidates; // this list will store all the soltion we have created but not examined yet
 candidateList listOfExaminedCandidates; // this is where we will store all the ones we're done with
-
 
 /* 
 * System Discription - The system will perform the search in two phases.
@@ -30,11 +36,16 @@ candidateList listOfExaminedCandidates; // this is where we will store all the o
 
 
 // Generates the first guess that the system will make.
-void GenerateInitialGuess(char pegs[], int Size);
+void GenerateInitialGuess(char pegs[], int size);
 
-// Generates a list of possible solutions. 
-// void GenerateListofSolutions();
+// Generates a list of possible solutions based on the working candidate.
+void GenerateListofSolutions(int size);
 
+// Retrieve the generated solution for testing. 
+void RetrieveGeneratedSolution(char* solutionBuffer, int size);
 
-// Retrieves the score for the working candidiate.
-void UpdateScore(int NewScore);
+// Retrieves the score for the working candidiate and performs a viablility check providing the list of unexamined candidates is full.
+void UpdateScore(int newScore);
+
+// Checks the viability of a solution. 
+int isWorkingCandidateViable();
