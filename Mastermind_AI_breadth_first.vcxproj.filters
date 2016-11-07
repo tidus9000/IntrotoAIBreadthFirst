@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Breath_First_Routienes">
+      <UniqueIdentifier>{23b25290-921f-4569-ba01-005c686ca1a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Our_AI_API">
+      <UniqueIdentifier>{cf1bff63-c8a0-4ab8-a1bd-3fda0c88d6d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Our_AI_API\Search">
+      <UniqueIdentifier>{f279efde-0a65-456c-9629-22475b41d571}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{f4b73cdc-aaf3-4630-8687-10723065f750}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Our_AI_API\Helpers">
+      <UniqueIdentifier>{2056f63d-49de-43af-a953-7ba9efcf74d9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SolutionListOperations.c">
+      <Filter>Breath_First_Routienes</Filter>
+    </ClCompile>
+    <ClCompile Include="Mastermind_Main.c" />
+    <ClCompile Include="NQueensChecker.c">
+      <Filter>Breath_First_Routienes</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution_Search.c">
+      <Filter>Our_AI_API\Search</Filter>
+    </ClCompile>
+    <ClCompile Include="Helpers.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NQueensDefinitions.h">
+      <Filter>Breath_First_Routienes</Filter>
+    </ClInclude>
+    <ClInclude Include="SolutionListOperations.h">
+      <Filter>Breath_First_Routienes</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureDefinitions.h">
+      <Filter>Breath_First_Routienes</Filter>
+    </ClInclude>
+    <ClInclude Include="NQueensChecker.h">
+      <Filter>Breath_First_Routienes</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_Search.h">
+      <Filter>Our_AI_API\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="boolean_type.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers.h">
+      <Filter>Our_AI_API\Helpers</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
