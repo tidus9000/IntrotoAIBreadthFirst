@@ -8,15 +8,17 @@
 
 #pragma once
 
+#ifndef _cplusplus
+  typedef int bool;
+  #define true 1
+  #define false 0
+#endif
+
+
 #include "StructureDefinitions.h"
 #include "SolutionListOperations.h"
+#include "Helpers.h"
 
-// Stores the score of the pegs for evalutaion of the solution.
-struct PegScore
-{
-	int Blackpegs;
-	int Whitepegs;
-};
 
 
 // Search Globals
@@ -42,10 +44,16 @@ void GenerateInitialGuess(char pegs[], int size);
 void GenerateListofSolutions(int size);
 
 // Retrieve the generated solution for testing. 
-void RetrieveGeneratedSolution(char* solutionBuffer, int size);
+void RetrieveGeneratedSolution(char solutionBuffer[], int size);
 
 // Retrieves the score for the working candidiate and performs a viablility check providing the list of unexamined candidates is full.
 void UpdateScore(int newScore);
 
 // Checks the viability of a solution. 
 int isWorkingCandidateViable();
+
+// perform the next stage of the search based on the viability of the last search. 
+void UpdateSearch();
+
+// records any known duplicates characters. 
+void UpdateDuplicateInfo();

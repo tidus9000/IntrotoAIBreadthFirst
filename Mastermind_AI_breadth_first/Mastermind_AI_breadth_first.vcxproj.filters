@@ -10,11 +10,11 @@
     <Filter Include="Our_AI_API\Search">
       <UniqueIdentifier>{f279efde-0a65-456c-9629-22475b41d571}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Our_AI_API\Storage">
-      <UniqueIdentifier>{2056f63d-49de-43af-a953-7ba9efcf74d9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Helpers">
       <UniqueIdentifier>{f4b73cdc-aaf3-4630-8687-10723065f750}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Our_AI_API\Helpers">
+      <UniqueIdentifier>{2056f63d-49de-43af-a953-7ba9efcf74d9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -28,6 +28,7 @@
     <ClCompile Include="Solution_Search.c">
       <Filter>Our_AI_API\Search</Filter>
     </ClCompile>
+    <ClCompile Include="Helpers.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NQueensDefinitions.h">
@@ -45,11 +46,11 @@
     <ClInclude Include="Solution_Search.h">
       <Filter>Our_AI_API\Search</Filter>
     </ClInclude>
-    <ClInclude Include="Update_Search.h">
-      <Filter>Our_AI_API\Storage</Filter>
-    </ClInclude>
     <ClInclude Include="boolean_type.h">
       <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers.h">
+      <Filter>Our_AI_API\Helpers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

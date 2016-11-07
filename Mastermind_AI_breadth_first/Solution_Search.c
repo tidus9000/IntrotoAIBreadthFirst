@@ -19,12 +19,18 @@
 char PegChoice[4] = { 'r', 'g', 'b','y' };
 
 char previousCounters[4][4];
+int  searchLevel = 0;
 
 // the previous score
 int previousScore = 0;
 
 int listCounter = 0;
 int retrieveListCounter = 0;
+
+int Character = 0;
+
+struct PegScore currentScore;
+struct PegScore PreviousScore;
 
 void GenerateInitialGuess(char pegs[], int size)
 {
@@ -59,7 +65,7 @@ void GenerateListofSolutions(int size)
 
 		for (j = 0; j < size; j++) 
 		{
-			if (PegChoice[j] != generatedSolution.variableValues[j]) 
+			if (PegChoice[j] != generatedSolution.variableValues[j] && previousCounters[i][j] != PegChoice[j]) 
 			{
 				generatedSolution.variableValues[i] = PegChoice[j];
 				currentListOfCandidates.listEntries[listCounter] = generatedSolution;
@@ -81,11 +87,62 @@ void RetrieveGeneratedSolution(char solutionBuffer[], int size)
 	{
 		solutionBuffer[i] = workingCandidate.variableValues[i];
 	}
+
+	retrieveListCounter += 1;
 }
 
 void UpdateScore(int newScore)
 {
-
 	workingCandidate.score = newScore;
 }
 
+bool isWorkingCandidateViable()
+{
+	SetScoreForGuess(&currentScore, workingCandidate.score, 4);
+	SetScoreForGuess(&PreviousScore, listOfExaminedCandidates.listEntries[listOfExaminedCandidates.indexOfLastEntryAdded].score, 4);
+
+	if (currentScore.Blackpegs <= PreviousScore.Blackpegs) 
+	{
+		if (currentScore.Blackpegs == PreviousScore.Blackpegs) 
+		{
+			if (currentScore.Whitepegs <= PreviousScore.Whitepegs) 
+			{
+				return false;
+			}
+			return true;
+		}
+		else 
+		{
+			return false;
+		}
+	}
+	else 
+	{ 
+		return true;
+	}
+}
+
+void UpdateSearch()
+{
+	switch (isWorkingCandidateViable()) 
+	{
+	case true:
+
+		UpdateDuplicateInfo();
+		GenerateListofSolutions(4);
+		break;
+	case false:
+		CopySolutionParam1_IntoSolutionParam2(&listOfExaminedCandidates.listEntries[listOfExaminedCandidates.indexOfLastEntryAdded], &workingCandidate);
+		break;
+	}
+}
+
+void UpdateDuplicateInfo()
+{
+	int i;
+	for (i = 0; i > 4; i++) 
+	{
+		previousCounters[i][Character] = workingCandidate.variableValues[i];
+	}
+	Character++;
+}

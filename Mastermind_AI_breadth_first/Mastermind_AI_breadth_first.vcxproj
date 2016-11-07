@@ -118,6 +118,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Helpers.c" />
     <ClCompile Include="Mastermind_Main.c" />
     <ClCompile Include="NQueensChecker.c" />
     <ClCompile Include="SolutionListOperations.c" />
@@ -130,7 +131,7 @@
     <ClInclude Include="SolutionListOperations.h" />
     <ClInclude Include="Solution_Search.h" />
     <ClInclude Include="StructureDefinitions.h" />
-    <ClInclude Include="Update_Search.h" />
+    <ClInclude Include="Helpers.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

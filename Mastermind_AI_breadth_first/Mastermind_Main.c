@@ -30,7 +30,6 @@
 #define BLACKPEGS(x) ((x)/NUMPEGS)
 
 
-
 // finally here are some functions I've written to save time
 void SetNewChallenge(char *challenge);
 int ScoreCandidateSolution(char *attempt, char *target);
@@ -71,24 +70,21 @@ int main(int argc, const char * argv[])
 	while (BLACKPEGS(scoreForAttempt) < NUMPEGS)
 	{
 
-		printf("enter q to quit or any other key followed by <return>to continue:");
-		scanf("%c%*c", &userResponse);
-		if (userResponse == 'q')
-			break;
-		else
+		//printf("enter q to quit or any other key followed by <return>to continue:");
+		//scanf("%c%*c", &userResponse);
+		//if (userResponse == 'q')
+		//	break;
+		//else
 		{
 			if (attempts < 1) 
 			{
 				// Nathan Butt (n86-64) - Generates starting state to begin the search. 
 				GenerateInitialGuess(candidate, NUMPEGS);
+				GenerateListofSolutions(NUMPEGS);
 			}
 			else 
 			{
-				GenerateListofSolutions(NUMPEGS);
-
-				RetrieveGeneratedSolution(candidate,NUMPEGS);
-
-
+				RetrieveGeneratedSolution(candidate, NUMPEGS);
 
 				//loop over each peg position
 				//for (peg = 0; peg < NUMPEGS; peg++)
@@ -111,52 +107,64 @@ int main(int argc, const char * argv[])
 		* It would be friendly to print out a message saying what the score was...
 		*/
 		scoreForAttempt = ScoreCandidateSolution(candidate, target);
+		
+
 		UpdateScore(scoreForAttempt);
-		printf("The score for the guess:");
-		for (peg = 0; peg<NUMPEGS; peg++)
-		{
-			printf(" %c", candidate[peg]);
-		}
-		printf(" was %d black and %d white pegs\n", BLACKPEGS(scoreForAttempt), WHITEPEGS(scoreForAttempt));
+
+		//if (attempts > 1) 
+		//{
+			UpdateSearch();
+		//}
+
+		//printf("The score for the guess:");
+		//for (peg = 0; peg<NUMPEGS; peg++)
+		//{
+		//	printf(" %c", candidate[peg]);
+		//}
+		//printf(" was %d black and %d white pegs\n", BLACKPEGS(scoreForAttempt), WHITEPEGS(scoreForAttempt));
 
 
 
 	} //end of while loop
 
 
-	if (BLACKPEGS(scoreForAttempt) == NUMPEGS)
+	if (BLACKPEGS(scoreForAttempt) == NUMPEGS) 
+	{
 		printf("Well done you have solved the puzzle in %d attempts!\n", attempts);
+		scanf("%c", &userResponse);
+	}
+
 	return 0;
 }
 
 
 
 
-char GetValidGuessForPeg(void)
-{
-	char guess = '-', userResponse;
-	int  readOK = 0;
-	while (readOK == 0)
-	{
-		printf("\n\tPlease enter one of r, g, b or y followed by <return>:");
-		// read two chars: first is the value they input (stored in UserResponse),
-		// second is the <return which we discard using %*c
-		scanf("%c%*c", &userResponse);
-		switch (userResponse)
-		{
-		case 'r': //fall through to 4th ok case
-		case 'y':
-		case 'g':
-		case 'b': readOK = 1;
-			guess = userResponse;
-			break;
-		default: readOK = 0;
-		}
-	}
-
-	return guess;
-
-}
+//char GetValidGuessForPeg(void)
+//{
+//	char guess = '-', userResponse;
+//	int  readOK = 0;
+//	while (readOK == 0)
+//	{
+//		printf("\n\tPlease enter one of r, g, b or y followed by <return>:");
+//		// read two chars: first is the value they input (stored in UserResponse),
+//		// second is the <return which we discard using %*c
+//		scanf("%c%*c", &userResponse);
+//		switch (userResponse)
+//		{
+//		case 'r': //fall through to 4th ok case
+//		case 'y':
+//		case 'g':
+//		case 'b': readOK = 1;
+//			guess = userResponse;
+//			break;
+//		default: readOK = 0;
+//		}
+//	}
+//
+//	return guess;
+//
+//}
 
 
 /////DONT CHANGE ANYTHING BELOW THIS LINE
