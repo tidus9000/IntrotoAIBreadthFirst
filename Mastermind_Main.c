@@ -1,5 +1,3 @@
-
-
 //
 //  main.c
 //  MastermindTest
@@ -85,6 +83,7 @@ int main(int argc, const char * argv[])
 			else 
 			{
 				RetrieveGeneratedSolution(candidate, NUMPEGS);
+
 
 				//loop over each peg position
 				//for (peg = 0; peg < NUMPEGS; peg++)
