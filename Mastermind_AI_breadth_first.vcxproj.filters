@@ -28,7 +28,9 @@
     <ClCompile Include="Solution_Search.c">
       <Filter>Our_AI_API\Search</Filter>
     </ClCompile>
-    <ClCompile Include="Helpers.c" />
+    <ClCompile Include="Helpers.c">
+      <Filter>Our_AI_API\Helpers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NQueensDefinitions.h">

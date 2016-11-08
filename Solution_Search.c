@@ -19,16 +19,13 @@
 char PegChoice[4] = { 'r', 'g', 'b','y' };
 
 char previousCounters[4][4];
-int  searchLevel = 0;
-
-// the previous score
-int previousScore = 0;
 
 int listCounter = 0;
 int retrieveListCounter = 0;
 
 int Character = 0;
 
+// storage of scores for tracking.
 struct PegScore currentScore;
 struct PegScore PreviousScore;
 
@@ -127,7 +124,6 @@ void UpdateSearch()
 	switch (isWorkingCandidateViable()) 
 	{
 	case true:
-
 		UpdateDuplicateInfo();
 		GenerateListofSolutions(4);
 		break;
